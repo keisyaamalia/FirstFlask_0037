@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>First Project Flask</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>First Project Flask</h1>
+
+  <form method="post">
+    <input type="text" name="name" placeholder="Masukkan nama">
+    <button>Send</button>
+  </form>
+
+  {% if name %}
+    <p>Hello, {{ name }}!</p>
+  {% endif %}
+</body>
+</html>
